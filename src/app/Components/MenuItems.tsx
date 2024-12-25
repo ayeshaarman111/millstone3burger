@@ -17,18 +17,18 @@ const ProductCardGrid = () => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
       {productImages.map((image, index) => (
-        <div key={index} className="border border-gray-300 rounded-lg shadow-md overflow-hidden">
+        <div key={index} className="border border-gray-300 rounded-lg shadow-md overflow-hidden group">
           <img
             src={image}
             alt={`Product ${index + 1}`}
-            className="w-full h-48 object-cover"
+            className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300 ease-in-out"
           />
           <div className="p-4">
             <h3 className="text-xl font-semibold">Product {index + 1}</h3>
-            <p className="text-gray-500">Sink your teeth into a  mouthwatering burger </p>
+            <p className="text-gray-500">Sink your teeth into a mouthwatering burger</p>
             <p className="text-lg font-bold text-yellow-500">$19.99</p>
             <button className="mt-4 bg-yellow-500 text-white px-6 py-2 rounded-full hover:bg-yellow-600">
-            <FaShoppingCart />
+              <FaShoppingCart />
             </button>
           </div>
         </div>
@@ -38,4 +38,3 @@ const ProductCardGrid = () => {
 };
 
 export default ProductCardGrid;
-
